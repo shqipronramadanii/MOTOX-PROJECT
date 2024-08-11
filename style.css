@@ -1,0 +1,787 @@
+* {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  font-variation-settings: "slnt" 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+header {
+  background-color: white;
+  height: 60px;
+}
+nav {
+  height: 60px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+ul {
+  list-style-type: none;
+}
+main {
+  /* height: 775px; */
+  background-color: #f8f8f8;
+}
+footer {
+  /* height: 200px; */
+  background-color: black;
+}
+.nav-logo img,
+.footer-logo img {
+  width: 50px;
+}
+.nav-logo img {
+  width: 202px;
+}
+.nav-list ul {
+  list-style-type: none;
+  display: flex;
+  /* gap: 30px; */
+}
+.nav-list li a {
+  margin: 0 15px;
+  color: black;
+  text-decoration: none;
+  transition: 500ms ease;
+  font-size: 23px;
+}
+
+.nav-list li a:hover {
+  color: red;
+}
+
+.first-section {
+  background-image: url("./photos/luxury-cars.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* object-fit: cover; */
+  height: 700px;
+  position: relative;
+}
+
+.overlay {
+  background-color: black;
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: 300ms;
+}
+
+.overlay:hover {
+  opacity: 0;
+}
+
+.first-section-div {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.first-section-h1 {
+  color: black;
+  opacity: 0.5;
+  font-size: 30px;
+  margin-bottom: 151px;
+  /* height: 100%; */
+  position: absolute;
+  z-index: 200;
+  transition: 300ms ease;
+}
+
+.overlay:hover ~ .first-section-div .first-section-h1 {
+  color: black;
+  opacity: 1; /* Ngjyra e tekstit kur bëhet hover mbi overlay */
+}
+
+.flex-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cards {
+  /* display: grid;
+  grid-template-columns: repeat(4, 151.33px);
+  grid-template-rows: repeat(3, 1fr); */
+  width: 95%;
+  /* display: grid;
+  grid-template-columns: repeat(4, 1fr); */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  padding-top: 35px;
+  /* position: relative; */
+  margin-bottom: 50px;
+  /* background-color: blue; */
+  /* background-color: red; */
+}
+
+.model,
+.car-price {
+  z-index: 2;
+}
+.box-img {
+  z-index: 2;
+}
+/* car-list li {
+  display: inline-block;
+  margin-right: 10px;
+  m.argin-bottom: 5px;
+  font-size: 14px;
+} */
+.car-list {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  /* grid-template-rows: repeat(2,1fr); */
+  list-style-type: none;
+  margin-top: 20px;
+}
+i {
+  color: red;
+}
+.car-list h4 {
+  color: gray;
+}
+img.icons.steering-wheel {
+  height: 25px;
+}
+
+.car-list li {
+  color: gray;
+}
+
+li.steering-li {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+li.steering-li img h4 {
+  font-weight: 600;
+}
+
+/* .card-1::before {
+  content: "";
+  background-color: red;
+  position: absolute;
+  transform-origin: bottom;
+ top: 0; 
+  width: 148px;
+  height: 50px;
+  margin-top: 171px;
+  transform-origin: bottom;
+
+  transform: skewY(5deg); 
+} */
+.card {
+  width: 300px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  border-radius: 9px;
+}
+.car-list li {
+  font-size: 10px;
+}
+.box-img {
+  /* background-color: red; */
+  /* width: 100px; */
+  /* height: 100px; */
+  overflow: hidden;
+  /* height: 100px; */
+  border-radius: 5px;
+  object-fit: cover;
+  object-position: center;
+}
+.box-img img {
+  /* width: 100px; */
+  height: 200px;
+  /* border-radius: 50%; */
+  /* margin-left: 20px; */
+  object-fit: cover;
+  object-position: center;
+  transition: 500ms ease;
+}
+
+.box-img:hover img {
+  transform: scale(1.2);
+}
+
+.model {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.model h5 {
+  font-size: 22px;
+  font-weight: 600;
+  transition: 500ms;
+}
+.model h5:hover {
+  color: red;
+}
+.car-price {
+  padding-bottom: 10px;
+}
+.model,
+.car-price {
+  padding-left: 0px;
+  align-self: flex-start;
+}
+
+.line {
+  width: 100%;
+  height: 1px;
+  background-color: gray;
+  margin-top: 9px;
+}
+
+.car-price {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.car-price h3 {
+  color: red;
+}
+
+button.add-to-card-button {
+  border: none;
+  border-radius: 8px;
+  padding: 9px;
+  background-color: red;
+  color: white;
+  transition: 300ms ease;
+}
+button.add-to-card-button:hover {
+  background-color: rgb(225, 2, 2);
+}
+.form-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+form {
+  width: 79%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* form {
+  grid-template-columns: repeat(3, 1fr);
+  width: 79%;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  flex-direction: column;
+} */
+label,
+input {
+  width: 99%;
+}
+.add-car-h2-div {
+  text-align: center;
+  margin-bottom: 17px;
+  transition: 500ms ease;
+}
+.add-car-h2-div:hover {
+  color: red;
+}
+input {
+  display: inline-block;
+  padding: 15px;
+  border: 1px solid red;
+  margin-bottom: 25px;
+  border-radius: 5px;
+}
+
+.fajlli {
+  border: none;
+  padding: 0;
+  padding-top: 10px;
+}
+input::file-selector-button {
+  border: none;
+  background-color: red;
+  color: white;
+  padding: 20px;
+  border-radius: 5px;
+  transition: 300ms ease;
+}
+input::file-selector-button:hover {
+  background-color: rgb(225, 2, 2);
+}
+.butoni {
+  border: none;
+  background-color: red;
+  color: white;
+  transition: 300ms ease;
+}
+.butoni:hover {
+  background-color: rgb(225, 2, 2);
+}
+.car-price .footer-ul {
+  align-content: end;
+  justify-self: center;
+  list-style-type: none;
+}
+.footer-ul li {
+  line-height: 1.5;
+}
+.wrapper {
+  width: 100%;
+  padding-top: 10px;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.footer-img {
+  position: absolute;
+  margin-bottom: 56px;
+  /* top: 27%; */
+  left: 7%;
+}
+.footer-img img {
+  width: 200px;
+  background-color: white;
+}
+.first-footer-ul {
+  padding-top: 49px;
+}
+.flex-wraper {
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  transition: 300ms ease;
+}
+.footer-ul h4,
+li {
+  color: white;
+  transition: 300ms ease;
+}
+
+.footer-ul h4,
+li:hover {
+  color: red;
+}
+.black {
+  padding: 8px;
+  text-align: center;
+  background-color: #ffffff;
+  color: red;
+}
+.black h5 {
+  font-weight: 600;
+}
+
+.nav-list li a i {
+  color: black;
+  text-decoration: none;
+  transition: 500ms ease;
+}
+
+/* .nav-list li a i:hover {
+  color: red;
+} */
+li.second-li {
+  position: relative;
+}
+span.span-circle {
+  display: flex;
+  width: 0px;
+  height: 0px;
+  padding: 9px;
+  background-color: red;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 33%;
+  right: 10px;
+  font-size: 13px;
+}
+@media screen and (max-width: 1024px) {
+  header {
+    background-color: white;
+    height: 50px;
+  }
+
+  nav {
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .nav-logo img {
+    width: 150px;
+  }
+
+  .nav-list li a {
+    margin: 0 15px;
+    color: black;
+    text-decoration: none;
+    transition: 500ms ease;
+    font-size: 20px;
+  }
+  .first-section {
+    background-image: url("./photos/luxury-cars.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+    height: 591px;
+    position: relative;
+  }
+
+  .first-section-h1 {
+    font-size: 23px;
+  }
+
+  .cards {
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    padding-top: 35px;
+    /* position: relative; */
+    margin-bottom: 50px;
+    /* background-color: blue; */
+    /* background-color: red; */
+  }
+
+  .box-img img {
+    width: 300px;
+    height: 200px;
+  }
+
+  .wrapper {
+    width: 100%;
+    padding-top: 0px;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .footer-img {
+    position: absolute;
+    margin-bottom: 0px;
+    top: 0%;
+    left: 6%;
+  }
+
+  .first-footer-ul {
+    padding-top: 42px;
+  }
+
+  .footer-img img {
+    width: 150px;
+    background-color: white;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    background-color: white;
+    height: 50px;
+  }
+
+  nav {
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .nav-logo img {
+    width: 150px;
+  }
+
+  .nav-list li a {
+    margin: 0 15px;
+    color: black;
+    text-decoration: none;
+    transition: 500ms ease;
+    font-size: 20px;
+  }
+  .first-section {
+    background-image: url("./photos/luxury-cars.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+    height: 491px;
+    position: relative;
+  }
+
+  .first-section-h1 {
+    font-size: 23px;
+  }
+
+  .cards {
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    padding-top: 35px;
+    /* position: relative; */
+    margin-bottom: 50px;
+    /* background-color: blue; */
+    /* background-color: red; */
+  }
+
+  .box-img img {
+    width: 300px;
+    height: 200px;
+  }
+
+  .wrapper {
+    width: 100%;
+    padding-top: 0px;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .footer-img {
+    position: absolute;
+    margin-bottom: 0px;
+    top: 0%;
+    left: 4%;
+  }
+
+  .first-footer-ul {
+    padding-top: 42px;
+  }
+
+  .footer-img img {
+    width: 150px;
+    background-color: white;
+  }
+}
+
+@media screen and (max-width: 658px) {
+  header {
+    background-color: white;
+    height: 50px;
+  }
+
+  nav {
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .nav-logo img {
+    width: 150px;
+  }
+
+  .nav-list li a {
+    margin: 0 15px;
+    color: black;
+    text-decoration: none;
+    transition: 500ms ease;
+    font-size: 20px;
+  }
+  .first-section {
+    background-image: url("./photos/luxury-cars.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+    height: 374px;
+    position: relative;
+  }
+
+  .first-section-h1 {
+    font-size: 21px;
+  }
+
+  .cards {
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    padding-top: 35px;
+    /* position: relative; */
+    margin-bottom: 50px;
+    /* background-color: blue; */
+    /* background-color: red; */
+  }
+
+  .card {
+    width: 250px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    border-radius: 9px;
+  }
+
+  .box-img {
+    width: 250px;
+    height: 179px;
+    overflow: hidden;
+    border-radius: 5px;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .box-img img {
+    width: 250px;
+    height: 179px;
+  }
+
+  .car-list {
+    font-size: 13px;
+  }
+
+  .wrapper {
+    width: 100%;
+    padding-top: 0px;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .footer-img {
+    position: absolute;
+    margin-bottom: 0px;
+    top: 0%;
+    left: 2%;
+  }
+
+  .first-footer-ul {
+    padding-top: 42px;
+  }
+
+  .footer-img img {
+    width: 150px;
+    background-color: white;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  header {
+    background-color: white;
+    height: 46px;
+  }
+
+  nav {
+    height: 46px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav-logo img {
+    width: 141px;
+  }
+
+  .nav-list li a {
+    margin: 0 15px;
+    color: black;
+    text-decoration: none;
+    transition: 500ms ease;
+    font-size: 17px;
+  }
+  .first-section {
+    background-image: url("./photos/luxury-cars.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+    height: 315px;
+    position: relative;
+  }
+
+  .first-section-h1 {
+    font-size: 16px;
+  }
+
+  .cards {
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    padding-top: 35px;
+    /* position: relative; */
+    margin-bottom: 50px;
+    /* background-color: blue; */
+    /* background-color: red; */
+  }
+
+  .card {
+    width: 300px;
+  }
+  .box-img,
+  .box-img img {
+    width: 300px;
+    height: 200px;
+  }
+
+  .flex-wraper {
+    height: 100px;
+  }
+
+  .wrapper {
+    width: 100%;
+    padding-top: 0px;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 10px;
+  }
+
+  .footer-img {
+    position: absolute;
+    margin-bottom: 56px;
+    /* top: 12%; */
+    left: 3%;
+  }
+
+  .footer-img img {
+    width: 100px;
+  }
+
+  .first-footer-ul {
+    padding-top: 26px;
+  }
+}

@@ -1,0 +1,478 @@
+* {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  font-variation-settings: "slnt" 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+header {
+  background-color: white;
+  height: 60px;
+}
+nav {
+  height: 60px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+ul {
+  list-style-type: none;
+}
+.nav-logo img,
+.footer-logo img {
+  width: 50px;
+}
+.nav-logo img {
+  width: 202px;
+}
+.nav-list ul {
+  list-style-type: none;
+  display: flex;
+  /* gap: 30px; */
+}
+.nav-list li a {
+  margin: 0 15px;
+  color: black;
+  text-decoration: none;
+  transition: 500ms ease;
+  font-size: 23px;
+}
+
+.nav-list li a:hover {
+  color: red;
+}
+
+.link-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  text-decoration: none;
+}
+
+.butoni {
+  width: 50%;
+  padding: 20px;
+  border: none;
+  background-color: red;
+  color: white;
+  transition: 300ms ease;
+  border-radius: 20px;
+  font-size: 20px;
+}
+.butoni:hover {
+  background-color: rgb(225, 2, 2);
+}
+
+footer {
+  /* height: 200px; */
+  background-color: black;
+}
+.footer-ul li {
+  line-height: 1.5;
+}
+.wrapper {
+  width: 100%;
+  padding-top: 10px;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.footer-img {
+  position: absolute;
+  margin-bottom: 56px;
+  /* top: 27%; */
+  left: 7%;
+}
+.footer-img img {
+  width: 200px;
+  background-color: white;
+}
+.first-footer-ul {
+  padding-top: 49px;
+}
+.flex-wraper {
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  transition: 300ms ease;
+}
+.footer-ul h4,
+li {
+  color: white;
+  transition: 300ms ease;
+}
+
+.footer-ul h4,
+li:hover {
+  color: red;
+}
+.black {
+  padding: 8px;
+  text-align: center;
+  background-color: #ffffff;
+  color: red;
+}
+.black h5 {
+  font-weight: 600;
+}
+
+.cards {
+}
+.card {
+  width: 100%;
+  padding: 20px;
+  background-color: white;
+  /* display: flex; */
+
+  display: grid;
+  grid-template-columns: 300px 300px 1fr;
+  gap: 15px;
+
+  border-radius: 9px;
+}
+
+.box-img {
+  /* background-color: red; */
+  /* width: 100px; */
+  /* height: 100px; */
+  overflow: hidden;
+  /* height: 100px; */
+  border-radius: 5px;
+  object-fit: cover;
+  object-position: center;
+}
+.box-img img {
+  /* width: 100px; */
+  height: 200px;
+  /* border-radius: 50%; */
+  /* margin-left: 20px; */
+  object-fit: cover;
+  object-position: center;
+  transition: 500ms ease;
+}
+
+.box-img:hover img {
+  transform: scale(1.1);
+}
+
+.model {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  color: black;
+}
+
+.model h5 {
+  font-size: 22px;
+  font-weight: normal;
+  transition: 500ms ease;
+  color: black;
+}
+
+.car-model:hover {
+  color: red;
+}
+
+.span-price {
+  font-weight: bold;
+  transition: 500ms ease;
+}
+.span-price:hover {
+  color: red;
+}
+
+.model,
+.car-price {
+  padding-left: 0px;
+  align-self: flex-start;
+}
+
+.line {
+  width: 100%;
+  height: 1px;
+  background-color: gray;
+  margin-top: 9px;
+}
+
+.car-price {
+  padding-bottom: 10px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  margin-top: 8px;
+  padding-right: 15px;
+}
+
+button.remove-from-cart-button {
+  border: none;
+  border-radius: 8px;
+  padding: 21px;
+  background-color: red;
+  color: white;
+  transition: 300ms ease;
+}
+button.remove-from-cart-button:hover {
+  background-color: rgb(225, 2, 2);
+}
+
+main {
+  background-color: gray;
+}
+.car-items {
+  padding: 50px;
+}
+.car-items li {
+  margin-bottom: 50px;
+}
+.car-list {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  /* grid-template-rows: repeat(2,1fr); */
+  list-style-type: none;
+  margin-top: 20px;
+}
+
+@media screen and (max-width: 1024px) {
+  .wrapper {
+    width: 100%;
+    padding-top: 0px;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .footer-img img {
+    width: 146px;
+    background-color: white;
+  }
+  .footer-img {
+    position: absolute;
+    margin-bottom: 56px;
+    /* top: 27%; */
+    left: 62px;
+  }
+  .first-footer-ul {
+    padding-top: 40px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    width: 100%;
+    background-color: white;
+    height: 60px;
+  }
+  .nav-logo img {
+    width: 150px;
+  }
+  .nav-list li a {
+    margin: 0 15px;
+    color: black;
+    text-decoration: none;
+    transition: 500ms ease;
+    font-size: 18px;
+  }
+
+  .card {
+    width: 100%;
+    padding: 20px;
+    background-color: white;
+    /* display: flex; */
+    display: grid;
+
+    grid-template-columns: 250px 150px 1fr;
+    gap: 15px;
+    border-radius: 9px;
+  }
+
+  .box-img {
+    /* background-color: red; */
+    width: 100%;
+    /* height: 184px; */
+    overflow: hidden;
+    /* height: 100px; */
+    border-radius: 5px;
+    object-fit: cover;
+    object-position: center;
+  }
+  .box-img img {
+    width: 100%;
+    height: 150px;
+    /* border-radius: 50%; */
+    /* margin-left: 20px; */
+    object-fit: cover;
+    object-position: center;
+    transition: 500ms ease;
+  }
+
+  .car-price {
+    padding-bottom: 10px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin-top: 8px;
+    padding-right: 15px;
+  }
+
+  .flex-wraper {
+    height: 138px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    transition: 300ms ease;
+  }
+
+  .wrapper {
+    width: 100%;
+    height: 100%;
+    padding-top: 30px;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: start;
+    font-size: 11px;
+  }
+
+  .footer-img img {
+    width: 100px;
+    background-color: white;
+  }
+
+  .footer-img {
+    position: absolute;
+    margin-bottom: 0px;
+    top: 23%;
+    left: 50px;
+  }
+
+  .first-footer-ul {
+    padding-top: 29px;
+  }
+
+  footer {
+    height: 145px;
+    background-color: black;
+  }
+
+  .car-model {
+    font-size: 15px !important;
+  }
+}
+@media screen and (max-width: 480px) {
+  header {
+    width: 100%;
+    background-color: white;
+    height: 60px;
+  }
+  .nav-logo img {
+    width: 150px;
+  }
+  .nav-list li a {
+    margin: 0 15px;
+    color: black;
+    text-decoration: none;
+    transition: 500ms ease;
+    font-size: 18px;
+  }
+
+  .card {
+    width: 100%;
+    padding: 20px;
+    background-color: white;
+    /* display: flex; */
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 200px 100px 100px;
+    gap: 15px;
+    border-radius: 9px;
+  }
+
+  .box-img {
+    /* background-color: red; */
+    width: 100%;
+    /* height: 184px; */
+    overflow: hidden;
+    /* height: 100px; */
+    border-radius: 5px;
+    object-fit: cover;
+    object-position: center;
+  }
+  .box-img img {
+    width: 100%;
+    height: 200px;
+    /* border-radius: 50%; */
+    /* margin-left: 20px; */
+    object-fit: cover;
+    object-position: center;
+    transition: 500ms ease;
+  }
+  .car-price {
+    padding-bottom: 10px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    margin-top: 8px;
+    padding-right: 15px;
+  }
+  .flex-wraper {
+    height: 138px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    transition: 300ms ease;
+  }
+
+  .wrapper {
+    width: 100%;
+    height: 100%;
+    padding-top: 30px;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: start;
+    font-size: 11px;
+  }
+
+  .footer-img img {
+    width: 100px;
+    background-color: white;
+  }
+
+  .footer-img {
+    position: absolute;
+    margin-bottom: 0px;
+    top: 23%;
+    left: 3%;
+  }
+
+  .first-footer-ul {
+    padding-top: 29px;
+  }
+
+  footer {
+    height: 145px;
+    background-color: black;
+  }
+}

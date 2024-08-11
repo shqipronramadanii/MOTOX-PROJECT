@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detyra E Pare</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="nav-logo">
+                <a href="#"><img src="./photos/motex-logo.png" alt="logo"></a>
+            </div>
+            <div class="nav-list">
+                <ul>
+                    <li><a href="#" class="add-cars-link">Add Cars</a></li>
+                    <li class="second-li">
+                        <a href="cart.html" class="cart-link">
+                            <i class="fa-solid fa-cart-shopping" class="ikona-e-shportes"></i>
+                        </a>
+                        <span class="span-circle">0</span>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section class="first-section">
+        <div class="overlay"></div>
+        <div class="first-section-div">
+            <h1 class="first-section-h1">Platforma me e madhe online per blerjen e veturave</h1>
+        </div>
+    </section>
+
+    <main>
+        <div class="flex-card">
+            <div class="cards" id="cards">
+                <!-- Makinat do të shfaqen këtu -->
+            </div>
+        </div>
+        <section class="add-card-section">
+            <div class="add-car-h2-div">
+                <h2>Add Car</h2>
+            </div>
+            <div class="form-wrapper">
+                <form action="#" id="car-form">
+                    <label for="prodhuesi">Prodhuesi</label>
+                    <input type="text" id="prodhuesi" name="prodhuesi" required />
+                    <label for="cmimi">Cmimi</label>
+                    <input type="number" id="cmimi" name="cmimi" required />
+                    <label for="modeli">Modeli</label>
+                    <input type="text" id="modeli" name="modeli" required />
+                    <label for="foto">Foto</label>
+                    <input type="file" name="foto" id="imazhi" class="fajlli" />
+                    <input type="submit" value="Add" class="butoni" />
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="flex-wraper">
+            <div class="wrapper">
+                <div class="footer-logo">
+                    <div class="footer-img"><img src="./photos/white-motex.png" alt="logo"></div>
+                    <ul class="footer-ul first-footer-ul">
+                        <li>Llogaria ime</li>
+                        <li>Politika e privatesise</li>
+                        <li>Kushtet e perdorimit</li>
+                    </ul>
+                </div>
+                <ul class="footer-ul">
+                    <h4>Llogaria</h4>
+                    <li>Shporta ime</li>
+                    <li>Porosite</li>
+                    <li>Lista e deshirave</li>
+                    <li>Llogaria ime</li>
+                </ul>
+                <ul class="footer-ul">
+                    <h4>Llogaria</h4>
+                    <li>Shporta ime</li>
+                    <li>Porosite</li>
+                    <li>Lista e deshirave</li>
+                    <li>Llogaria ime</li>
+                </ul>
+                <ul class="footer-ul">
+                    <h4>Llogaria</h4>
+                    <li>Shporta ime</li>
+                    <li>Porosite</li>
+                    <li>Lista e deshirave</li>
+                    <li>Llogaria ime</li>
+                </ul>
+            </div>
+        </div>
+        <div class="black">
+            <h5>Copyright 2024 - WebDevs 05/24</h5>
+        </div>
+    </footer>
+    <script src="script.js">
+        document.addEventListener("DOMContentLoaded", function () {
+            // Përdorim këtë kod për të përditësuar numrin në ikonën e shportës
+            const cartCount = document.querySelector(".span-circle");
+            let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+            cartCount.textContent = cartItems.length;
+        });
+
+    </script>
+
+
+</body>
+
+</html>

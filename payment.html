@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="payment.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="nav-logo">
+                <a href="#"><img src="./photos/motex-logo.png" alt="logo"></a>
+            </div>
+            <div class="nav-list">
+                <ul>
+                    <li><a href="index.html">Add Cars</li></a>
+                    <li class="second-li"><a href="cart.html"><i class="fa-solid fa-cart-shopping"
+                                class="ikona-e-shportes"></i>
+                        </a>
+                        <span class="span-circle">0</span>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <form action="" id="payment-form">
+            <label for="name">Name on card</label>
+            <input type="text" id="name" name="name" required />
+
+            <label for="card-number">Card number</label>
+            <input type="text" id="card-number" name="card-number" required pattern="[0-9]{13,16}" />
+            <label for="cvc">CVC</label>
+            <input type="text" name="cvc" id="cvc" required pattern="[0-9]{3,4}" />
+
+            <label for="expiration-date">Expiration date;</label>
+            <input type="text" name="expiration-date" id="expiration-date" placeholder="MM / YY" required />
+
+            <button type="submit" id="pay-button">Pay</button>
+            <div id="success-message" style="display: none">
+                <p>
+                    Thank you for your payment.Your order will be delivered within 1 hour,
+                </p>
+            </div>
+        </form>
+
+    </main>
+    <footer>
+        <div class="flex-wraper">
+            <div class="wrapper">
+                <div class="footer-logo">
+                    <div class="footer-img"><img src="./photos/white-motex.png" alt="logo"></div>
+                    <ul class="footer-ul first-footer-ul">
+                        <li>Llogaria ime</li>
+                        <li>Politika e privatesise</li>
+                        <li>Kushtet e perdorimit</li>
+                    </ul>
+                </div>
+                <ul class="footer-ul ">
+                    <h4>Llogaria</h4>
+                    <li>Shporta ime</li>
+                    <li>Porosite</li>
+                    <li>Lista e deshirave</li>
+                    <li>Llogaria ime</li>
+                </ul>
+                <ul class="footer-ul">
+                    <h4>Llogaria</h4>
+                    <li>Shporta ime</li>
+                    <li>Porosite</li>
+                    <li>Lista e deshirave</li>
+                    <li>Llogaria ime</li>
+                </ul>
+                <ul class="footer-ul">
+                    <h4>Llogaria</h4>
+                    <li>Shporta ime</li>
+                    <li>Porosite</li>
+                    <li>Lista e deshirave</li>
+                    <li>Llogaria ime</li>
+                </ul>
+            </div>
+        </div>
+        <div class="black">
+            <h5>Copyright 2024 - WebDevs 05/24</h5>
+        </div>
+    </footer>
+    <script src="payment.js"></script>
+</body>
+
+</html>
