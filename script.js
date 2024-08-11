@@ -4,26 +4,41 @@ document.addEventListener("DOMContentLoaded", function () {
   let cars = JSON.parse(localStorage.getItem("cars")) || [
     {
       ID: 1,
-      Prodhuesi: "Mercedes AMG",
-      Modeli: "Mercedes",
+      Prodhuesi: "Mercedes",
+      Modeli: "Mercedes AMG",
       Cmimi: 20000,
       Imazhi: "./photos/mercedes-benz.jpg",
     },
     {
       ID: 2,
-      Prodhuesi: "BMW X6",
-      Modeli: "BMW",
+      Prodhuesi: "BMW",
+      Modeli: "BMW Sports Car",
       Cmimi: 25000,
       Imazhi: "./photos/Bmw-sports-car.jpg",
     },
     {
       ID: 3,
-      Prodhuesi: "Yellow Ferrari",
-      Modeli: "Ferrari",
+      Prodhuesi: "Ferrari",
+      Modeli: "Yellow Ferrari",
       Cmimi: 1000000,
       Imazhi: "./photos/yellow-ferrari.jpg",
     },
   ];
+
+  // Funksioni për të formatizuar çmimin
+  function formatPrice(price) {
+    return (
+      new Intl.NumberFormat("en-GB", {
+        // 'en-GB' për formatin e euros pas numrit
+        style: "currency",
+        currency: "EUR",
+        minimumFractionDigits: 0,
+        maximumFractionDigits: 0,
+      })
+        .format(price)
+        .replace("€", "") + "€"
+    ); // Këtu e shtojmë simbolet e euros pas numrit
+  }
 
   // Funksioni për të shfaqur makinat në index.html
   function displayCars() {
@@ -46,8 +61,10 @@ document.addEventListener("DOMContentLoaded", function () {
         </ul>
         <div class="line"></div>
         <div class="car-price">
-          <h3>${car.Cmimi}</h3>
-          <button class="add-to-card-button" data-id="${car.ID}">Add to cart</button>
+          <h3>${formatPrice(car.Cmimi)}</h3>
+          <button class="add-to-card-button" data-id="${
+            car.ID
+          }">Add to cart</button>
         </div>
       `;
       carList.appendChild(carDiv);
@@ -70,7 +87,7 @@ document.addEventListener("DOMContentLoaded", function () {
         ID: cars.length + 1,
         Prodhuesi: prodhuesi,
         Modeli: modeli,
-        Cmimi: cmimi,
+        Cmimi: parseFloat(cmimi), // Sigurohuni që cmimi është numër
         Imazhi: imazhi,
       };
 

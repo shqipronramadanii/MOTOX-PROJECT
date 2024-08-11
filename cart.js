@@ -16,7 +16,9 @@ document.addEventListener("DOMContentLoaded", function () {
                       </div>
                       <div class="model">
                           <h5 class="car-model">${item.Modeli}</h5>
-                          <span class="span-price">${item.Cmimi}&euro;</span>
+                          <span class="span-price">${formatPrice(
+                            item.Cmimi
+                          )}&euro;</span>
                       </div>
                       <div class="car-price">
                           <button class="remove-from-cart-button">Remove from cart</button>
@@ -33,8 +35,14 @@ document.addEventListener("DOMContentLoaded", function () {
       cartItems.appendChild(li);
     });
 
-    // Thirr funksionin për të shfaqur butonin "Order Now" kur ka artikuj në cart
+    // Thirr funksionin për të shfaqur butonin "Order Now" dhe totalin kur ka artikuj në cart
     displayOrderButton();
+    displayTotal();
+  }
+
+  function formatPrice(price) {
+    // Formatimi i çmimit me ndarësin e mijëra
+    return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   }
 
   function removeFromCart(index) {
@@ -44,13 +52,11 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function displayOrderButton() {
-    // Kontrollo nëse ekziston tashmë butoni
     let orderButtonLi = document.getElementById("order-button-li");
 
     if (items.length > 0) {
-      // Krijo li për butonin nëse nuk ekziston
       if (!orderButtonLi) {
-        orderButtonLink = document.createElement("a");
+        const orderButtonLink = document.createElement("a");
         orderButtonLink.id = "order-button-li";
         orderButtonLink.classList.add("link-button");
         const orderButton = document.createElement("button");
@@ -65,10 +71,40 @@ document.addEventListener("DOMContentLoaded", function () {
         cartItems.appendChild(orderButtonLink);
       }
     } else {
-      // Fshi li me butonin nëse nuk ka items
       if (orderButtonLi) {
         orderButtonLi.remove();
       }
+    }
+  }
+
+  function displayTotal() {
+    // Fshi totalin nëse ekziston
+    const existingTotalWrapper = document.getElementById("total-wrapper");
+    if (existingTotalWrapper) {
+      existingTotalWrapper.remove();
+    }
+
+    // Llogarit totalin
+    const total = items.reduce((sum, item) => sum + item.Cmimi, 0);
+
+    // Krijo dhe formato totalin
+    const totalWrapper = document.createElement("div");
+    totalWrapper.id = "total-wrapper";
+
+    const totalContainer = document.createElement("div");
+    totalContainer.id = "total-container";
+    totalContainer.innerHTML = `
+      <h4>Total: ${total === 0 ? "0.00" : formatPrice(total) + "€"}</h4>
+    `;
+
+    totalWrapper.appendChild(totalContainer);
+
+    // Vendos `total-wrapper` mbi butonin "Order Now"
+    const orderButtonLi = document.getElementById("order-button-li");
+    if (orderButtonLi) {
+      cartItems.insertBefore(totalWrapper, orderButtonLi);
+    } else {
+      cartItems.appendChild(totalWrapper);
     }
   }
 

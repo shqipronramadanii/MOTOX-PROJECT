@@ -145,7 +145,7 @@ footer {
   gap: 15px;
   /* grid-template-rows: repeat(2,1fr); */
   list-style-type: none;
-  margin-top: 20px;
+  margin-top: 7px;
 }
 i {
   color: red;
@@ -185,7 +185,7 @@ li.steering-li img h4 {
   transform: skewY(5deg); 
 } */
 .card {
-  width: 300px;
+  width: 350px;
   background-color: white;
   display: flex;
   flex-direction: column;
@@ -194,7 +194,7 @@ li.steering-li img h4 {
   border-radius: 9px;
 }
 .car-list li {
-  font-size: 10px;
+  font-size: 13px;
 }
 .box-img {
   /* background-color: red; */
@@ -207,7 +207,7 @@ li.steering-li img h4 {
   object-position: center;
 }
 .box-img img {
-  /* width: 100px; */
+  width: 350px;
   height: 200px;
   /* border-radius: 50%; */
   /* margin-left: 20px; */

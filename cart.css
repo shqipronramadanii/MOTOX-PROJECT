@@ -1,3 +1,12 @@
+/* html,
+body {
+  height: 100%;
+} */
+main {
+  min-height: calc(
+    100vh - 60px - 200px
+  ); /* Lartësia totale - lartësia e header dhe footer */
+}
 * {
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
@@ -246,6 +255,28 @@ main {
   /* grid-template-rows: repeat(2,1fr); */
   list-style-type: none;
   margin-top: 20px;
+}
+
+div#total-wrapper {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+div#total-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: red;
+  padding: 20px;
+  border-radius: 20px;
+  width: 20%;
+  color: white;
+  transition: 300ms;
+}
+
+div#total-container:hover {
+  background-color: rgb(225, 2, 2);
 }
 
 @media screen and (max-width: 1024px) {
