@@ -87,7 +87,7 @@ document.addEventListener("DOMContentLoaded", function () {
         ID: cars.length + 1,
         Prodhuesi: prodhuesi,
         Modeli: modeli,
-        Cmimi: parseFloat(cmimi), // Sigurohuni që cmimi është numër
+        Cmimi: parseFloat(cmimi),
         Imazhi: imazhi,
       };
 
