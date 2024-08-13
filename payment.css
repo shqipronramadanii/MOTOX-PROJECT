@@ -250,7 +250,7 @@ span.span-circle {
   }
 
   .flex-wraper {
-    height: 110px;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -258,28 +258,42 @@ span.span-circle {
     transition: 300ms ease;
   }
 
-  .footer-img {
-    position: absolute;
-    margin-bottom: 11px;
-    top: 13%;
-    left: 18px;
+  .wrapper {
+    width: 100%;
+    height: 100%;
+    padding-top: 0px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 13px;
+    gap: 10px;
   }
 
   .footer-img img {
-    width: 100px;
+    width: 200px;
+    background-color: white;
+  }
+
+  .footer-img {
+    position: absolute;
+    margin-bottom: 0px;
+    top: 3%;
+    left: 3%;
   }
 
   .first-footer-ul {
-    padding-top: 23px;
+    padding-left: 20px;
+    padding-top: 70px;
   }
 
-  .wrapper {
-    width: 100%;
-    padding-top: 10px;
-    position: relative;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    font-size: 10px;
+  footer {
+    height: auto;
+    background-color: black;
+  }
+
+  .black {
+    margin-top: 16px;
   }
 }
